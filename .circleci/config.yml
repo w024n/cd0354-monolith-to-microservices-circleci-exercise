@@ -18,7 +18,7 @@ jobs:
           command: |
             echo "Inside the Build and push Docker image step"
             docker --version # print the version for logging
-            docker build -t w024sec/circeli-sample .        
-            docker tag w024sec/circeli-sample w024sec/circeli-sample:1.0.0
+            docker build -t w024sec/circlecli-sample .        
+            docker tag w024sec/circleli-sample w024sec/circleli-sample:1.0.0
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            docker push w024sec/circeli-sample:1.0.0
+            docker push w024sec/circleli-sample:1.0.0
